@@ -13,6 +13,7 @@ open Fable.Core
 open Fable.Core.JsInterop
 open Fable.Import.Browser
 
+// note that init() is already in use (where?)
 let initcanvas() =
   let canvas = document.getElementById("canvas") :?> HTMLCanvasElement
   canvas.width <- 200.
@@ -24,9 +25,28 @@ let initcanvas() =
   ctx.fillRect (30., 30., 55., 50.)
   ctx.fillStyle <- !^"rgba(0, 0, 100, 0.5)"
   ctx.fillRect (50., 50., 55., 50.)
+
+// let initCanvas2() =
+//   let canvas2 = document.getElementById("canvas2") :?> HTMLCanvasElement
+//   canvas2.width <- 300.
+//   canvas2.height <- 300.
+//   let ctx = canvas2.getContext_2d() 
+//   ctx.fill <- (id)
+
+// initCanvas2()  
+
+let setMyDivText() =
+  let myDiv = document.getElementById("myDiv") :?> HTMLDivElement
+  myDiv.innerText <- "This is some inner text"
+
+setMyDivText()
+
+
+  
+    
+
   
 initcanvas()
-
 
 // MODEL
 
